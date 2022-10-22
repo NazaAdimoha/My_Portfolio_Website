@@ -4,7 +4,8 @@ import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
-import { BsFillPersonLinesFill } from "react-icons/bs"
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import Logo from "../public/assets/brand/logo_copy-removebg.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
         {/* Incorporate lazy loading of Image */}
         <Link href="/">
           <a>
-            <Image src="" alt="logo" width="125" height="50" />
+            <Image src={Logo} alt="logo" width="100%" height="80%" />
           </a>
         </Link>
         <div>
@@ -84,7 +85,7 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image src="" alt="logo" width="87" height="35" />
+              <Image src={Logo} alt="logo" width="100%" height="80%" />
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 cursor-pointer p-3 "
