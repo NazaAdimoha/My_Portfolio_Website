@@ -4,7 +4,7 @@ import AboutImg from "../public/assets/brand/react_banner_copy.png";
 
 const About = () => {
   return (
-    <div className="w-full md:h-screen p-4 flex items-center py-12 md:px-32">
+    <div id="about" className="w-full md:h-screen p-4 flex items-center py-12 md:px-32">
       <div className="max-w-[1240] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">

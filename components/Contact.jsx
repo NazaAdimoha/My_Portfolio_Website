@@ -70,7 +70,7 @@ const Contact = () => {
     // </div>
 
     <section className="text-gray-600 body-font relative">
-      <div className="absolute inset-0 bg-gray-300">
+      <div id="contact" className="absolute inset-0 bg-gray-300">
         <iframe
           width="100%"
           height="1100"

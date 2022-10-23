@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
@@ -9,13 +9,28 @@ import Logo from "../public/assets/brand/logo_copy-removebg.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  {/* function for smooth scroll and prevention of an overlow at the navbar */}
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+  })
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div className={
+      shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"
+    }>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         {/* Incorporate lazy loading of Image */}
         <Link href="/">
@@ -32,28 +47,28 @@ const Navbar = () => {
                 </li>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/#about">
               <a>
                 <li className="text-sm ml-10 uppercase hover:border-b ">
                   About
                 </li>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/#skills">
               <a>
                 <li className="text-sm ml-10 uppercase hover:border-b ">
                   Skills
                 </li>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/#projects">
               <a>
                 <li className="text-sm ml-10 uppercase hover:border-b ">
                   Projects
                 </li>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/#contact">
               <a>
                 <li className="text-sm ml-10 uppercase hover:border-b ">
                   Contact
