@@ -25,7 +25,7 @@ const Navbar = () => {
       }
     }
     window.addEventListener('scroll', handleScroll);
-  })
+  }, [])
 
   return (
     <div className={
@@ -118,35 +118,35 @@ const Navbar = () => {
             <ul className="uppercase">
               <Link href="/">
                 <a>
-                  <li className="py-4 text-sm ml-10 uppercase hover:border-b ">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm ml-10 uppercase hover:border-b ">
                     Home
                   </li>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/#about">
                 <a>
-                  <li className="py-4 text-sm ml-10 uppercase hover:border-b ">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm ml-10 uppercase hover:border-b ">
                     About
                   </li>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/#skills">
                 <a>
-                  <li className="py-4 text-sm ml-10 uppercase hover:border-b ">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm ml-10 uppercase hover:border-b ">
                     Skills
                   </li>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/#projects">
                 <a>
-                  <li className="py-4 text-sm ml-10 uppercase hover:border-b ">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm ml-10 uppercase hover:border-b ">
                     Projects
                   </li>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/#contact">
                 <a>
-                  <li className="py-4 text-sm ml-10 uppercase hover:border-b ">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm ml-10 uppercase hover:border-b ">
                     Contact
                   </li>
                 </a>

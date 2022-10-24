@@ -16,7 +16,7 @@ const ProjectsComponent
             <h2 className='py-4 '>What I've Built</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 
-            <ProjectItem title='ScoreCard' backgroundImg={ScoreCard} projectUrl='/' />
+            <ProjectItem title='ScoreCard' backgroundImg={ScoreCard} projectUrl='/scoreCard' />
             <ProjectItem title='BuyConnect' backgroundImg={BuyConnect} projectUrl='/' />
             <ProjectItem title='TraderaXpress' backgroundImg={TraderaXpress} projectUrl='/' />
             
