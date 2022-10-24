@@ -6,10 +6,24 @@ import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Logo from "../public/assets/brand/logo_copy-removebg.png";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState('#ecf0f3');
+  const [linksColor, setLinksColor] = useState('#fff');
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.asPath === '/scoreCard' || router.asPath === '/buyConnect' || router.asPath === '/traderaxpress') {
+      setNavBg('transparent');
+      setLinksColor('#ecf0f3');
+    } else {
+      setNavBg('#ecf0f3');
+      setLinksColor('#fff');
+    }
+  }, [router])
 
   const handleNav = () => {
     setNav(!nav);
@@ -28,7 +42,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className={
+    <div style={{ backgroundColor: `${navBg}`}} className={
       shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"
     }>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -39,7 +53,7 @@ const Navbar = () => {
           </a>
         </Link>
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{ color: `${linksColor}`}} className="hidden md:flex">
             <Link href="/">
               <a>
                 <li className="text-sm ml-10 uppercase hover:border-b ">
