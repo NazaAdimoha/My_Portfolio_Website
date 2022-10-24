@@ -14,8 +14,8 @@ const Main = () => {
             Delivering Value through People, Passionate Learning and Innovation
           </p>
           <h1 className="py-4 sm:text-lg text-3xl font-bold text-gray-800">
-            Hi, I'm <span className="text-[#5651e8]">Naza Adimoha</span> <br />{" "}
-            A Frontend Developer
+            Hi, I'm <span className='text-[#5651e5]'>N</span>aza <span className='text-[#5651e5]'>A</span>dimoha <br />{" "}
+            A MERN Stack Engineer
           </h1>
           <p className="py-4 m-auto max-w-[70%] text-gray-600 text-sm mt-4">
             I am a MERN stack software engineer, a design thinker, and a problem
