@@ -1,5 +1,15 @@
 import Image from "next/image";
 import React from "react";
+import HTML from "../public/assets/skills/html.png";
+import CSS from "../public/assets/skills/css.png";
+import JS from "../public/assets/skills/javascript.png";
+import REACT from "../public/assets/skills/react.png";
+import NEXT from "../public/assets/skills/nextjs.png";
+import TAILWIND from "../public/assets/skills/tailwind.png";
+import FIREBASE from "../public/assets/skills/firebase.png";
+import NODE from "../public/assets/skills/node.png";
+import MONGO from "../public/assets/skills/mongo.png";
+
 
 const Skills = () => {
   return (
@@ -16,7 +26,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/html.png"
+                  src={HTML}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -35,7 +45,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/css.png"
+                  src={CSS}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -54,7 +64,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/javascript.png"
+                  src={JS}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -73,7 +83,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/react.png"
+                  src={REACT}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -92,7 +102,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/nextjs.png"
+                  src={NEXT}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -111,7 +121,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/node.png"
+                  src={TAILWIND}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -119,7 +129,7 @@ const Skills = () => {
               </div>
 
               <div className="flex flex-col items-center justify-center">
-                <h3>NODE</h3>
+                <h3>TAILWIND</h3>
               </div>
 
             
@@ -130,7 +140,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/firebase.png"
+                  src={FIREBASE}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -149,7 +159,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/mongo.png"
+                  src={MONGO}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -168,7 +178,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/tailwind.png"
+                  src={NODE}
                   width="64px"
                   height="64px"
                   alt="/"
@@ -176,7 +186,7 @@ const Skills = () => {
               </div>
 
               <div className="flex flex-col items-center justify-center">
-                <h3>TAILWIND</h3>
+                <h3>NODE</h3>
               </div>
 
             
