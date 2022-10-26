@@ -30,10 +30,10 @@ const traderaxpress = () => {
             <br /> created to trade cryptocurrencies and <br /> view the prices
             of crypto assets over the internet.
           </p>
-          <a href="https://tradera-xpress.netlify.app/" target="_blank">
+          <a href="https://tradera-xpress.netlify.app/" target="_blank" rel="noreferrer">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/NazaAdimoha/TradXpress" target="_blank">
+          <a href="https://github.com/NazaAdimoha/TradXpress" target="_blank" rel="noreferrer">
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
         </div>
