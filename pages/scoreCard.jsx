@@ -7,8 +7,8 @@ import Link from "next/link";
 const ScoreCard = () => {
   return (
     <div className="w-full">
-      <div className="w-screen h-[30vh] lg:h-[40vh] relative">
-        <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
+      <div className="w-screen h-[50vh] lg:h-[60vh] relative">
+        <div className="absolute top-0 left-0 w-full h-[50vh] lg:h-[60vh] bg-black/80 z-10" />
         <Image
           className="absolute z-1"
           layout="fill"
@@ -33,8 +33,12 @@ const ScoreCard = () => {
             also view other users scorecards and follow them to keep track of
             their progress.
           </p>
-          <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-2 mt-4 mr-8">Code</button>
+          <a href="https://studperf.netlify.app/" target="_blank">
+            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
+          </a>
+          <a href="#" target="_blank">
+            <button className="px-8 py-2 mt-4 mr-8">Code</button>
+          </a>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-600 rounded-xl p-4">
             <div className="p-2">

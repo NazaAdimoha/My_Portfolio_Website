@@ -18,12 +18,7 @@ const Main = () => {
             A MERN Stack Engineer
           </h1>
           <p className="py-4 m-auto max-w-[70%] text-gray-600 text-sm mt-4">
-            I am a MERN stack software engineer, a design thinker, and a problem
-            solver. I am proficient in an assortment of technologies, including
-            React, Node.Js, Typescript, Express, and Relational Databases such
-            as MongoDB. I have also led a team of six in building a progress
-            tracker application to serve over 1,000 devs per month, increasing
-            efficiency and transparency by over 60 percent.
+            I am a MERN stack engineer with a passion for building scalable and robust web applications. I relish the Art of Solving Problems. I am a  <span className='text-[#5651e5]'>Design Thinker</span>
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4 ">
             <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300 ">
