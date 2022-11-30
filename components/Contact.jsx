@@ -7,8 +7,59 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { IoMailOutline } from "react-icons/io5";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
+import { send } from 'emailjs-com';
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
+  const [sender_name, set_sender_name] = React.useState("");
+  const [sender_email, set_sender_email] = React.useState("");
+  const [sender_message, set_sender_message] = React.useState("");
+  const [sender_subject, set_sender_subject] = React.useState("");
+  const [sender_phone, set_sender_phone] = React.useState("");
+  
+
+  const sendMail = (e) => {
+    e.preventDefault();
+    send(
+      "service_yxf68r4",
+      "template_rtx51mr",
+      { sender_name, sender_email, sender_message, sender_subject, sender_phone },
+      "9snJF3Q7nL59g5qA8"
+    )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      }); 
+      set_sender_name("");
+      set_sender_email("");
+      set_sender_message("");
+      set_sender_subject("");
+      set_sender_phone("");    
+  }
+
+  const handleChange = (e) => {
+    set_sender_message(e.target.value);
+  }
+
+  const handleName = (e) => {
+    set_sender_name(e.target.value.trim());
+  }
+
+  const handleEmail = (e) => {
+    set_sender_email(e.target.value.trim());
+  }
+
+  const handleSubject = (e) => {
+    set_sender_subject(e.target.value.trim());
+  }
+
+  const handlePhone = (e) => {
+    set_sender_phone(e.target.value.trim());
+  }
+
+
   return (
     <section className="text-gray-600 body-font relative">
       <div id="contact" className="absolute inset-0 bg-gray-300">
@@ -26,11 +77,10 @@ const Contact = () => {
       <div className="container px-5 py-24 mx-auto flex">
         <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-50 shadow-md">
           <div className="relative mb-2">
+
             {/* Form starts here */}
             <form
-              action=""
-              method="POST"
-              encType=""
+              onSubmit={sendMail}
             >
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                 <div className="flex flex-col">
@@ -38,7 +88,9 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
-                    name="name"
+                    name="sender_name"
+                    value={sender_name}
+                    onChange={handleName}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -46,7 +98,9 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
-                    name="phone"
+                    name="sender_phone"
+                    value={sender_phone}
+                    onChange={handlePhone}
                   />
                 </div>
               </div>
@@ -55,7 +109,9 @@ const Contact = () => {
                 <input
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                   type="email"
-                  name="email"
+                  name="sender_email"
+                  value={sender_email}
+                  onChange={handleEmail}
                 />
               </div>
               <div className="flex flex-col py-2">
@@ -63,7 +119,9 @@ const Contact = () => {
                 <input
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                   type="text"
-                  name="subject"
+                  name="sender_subject"
+                  value={sender_subject}
+                  onChange={handleSubject}
                 />
               </div>
               <div className="flex flex-col py-2">
@@ -71,10 +129,12 @@ const Contact = () => {
                 <textarea
                   className="border-2 rounded-lg p-3 border-gray-300"
                   rows="10"
-                  name="message"
+                  name="sender_message"
+                  value={sender_message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
-              <button className="w-full p-4 text-gray-100 mt-4 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <button type="submit" className="w-full p-4 text-gray-100 mt-4 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                 Send Message
               </button>
             </form>
