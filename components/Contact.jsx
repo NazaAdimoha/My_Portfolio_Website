@@ -9,8 +9,21 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { send } from 'emailjs-com';
 import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const showToastMessage = () => {
+    toast.success("Message Sent Successfully!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
   const [sender_name, set_sender_name] = React.useState("");
   const [sender_email, set_sender_email] = React.useState("");
   const [sender_message, set_sender_message] = React.useState("");
@@ -134,10 +147,12 @@ const Contact = () => {
                   onChange={handleChange}
                 ></textarea>
               </div>
-              <button type="submit" className="w-full p-4 text-gray-100 mt-4 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <button onClick={showToastMessage} type="submit" className="w-full p-4 text-gray-100 mt-4 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                 Send Message
               </button>
+              
             </form>
+            <ToastContainer />
             <div className='flex justify-center py-12'>
           <Link href='/'>
             <a>
