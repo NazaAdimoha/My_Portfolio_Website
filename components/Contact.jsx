@@ -148,7 +148,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button onClick={showToastMessage} type="submit" className="w-full p-4 text-gray-100 mt-4 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Send Message
+                Buzz Me!
               </button>
               
             </form>
