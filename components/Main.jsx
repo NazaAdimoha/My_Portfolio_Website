@@ -48,10 +48,18 @@ const Main = () => {
               Hi{" "}
               <motion.span
                 className="text-3xl lg:text-6xl"
+                initial="rest"
                 animate={{
-                  rotate: [0, -50, 50, 0],
-                  transition: { repeat: Infinity, duration: 3 },
+                  rotate: [0, -10, 10, 0],
+                  transition: {
+                    duration: 2,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.5, 1],
+                    repeat: Infinity,
+                  },
                 }}
+                role="img"
+                aria-label="Waving hand"
               >
                 👋🏾
               </motion.span>
