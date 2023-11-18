@@ -9,7 +9,7 @@ const About = () => {
       className="w-full bg-black md:h-screen p-4 flex items-center py-12 md:px-32"
     >
       <div className="max-w-[1240] m-auto md:grid grid-cols-3 gap-8">
-        <div className="col-span-2">
+        <div className="col-span-2 max-w-lg">
           <h2 className="py-4 text-[#5651e5]">Meet Me...</h2>
           <p className=" py-2  text-gray-600">| Bugs are a Thrill |</p>
           <p className="text-gray-500 py-2 ">
@@ -30,11 +30,7 @@ const About = () => {
             feature raised the engagement with the application by 85% as a
             result, promoting inclusiveness, and also leading to returning
             clients. React, Typescript, React Query, and Redux were used for
-            state management on the front end. Over time I have developed
-            leadership skills that make me a perfect fit for any role. I believe
-            your organization will provide me with a sense of ownership while
-            maintaining a stable work-life balance that enables me to do my best
-            work.
+            state management on the front end.
           </p>
           <p className="text-gray-600 py-2 cursor-pointer underline">
             Checkout out some of my projects...
@@ -44,9 +40,9 @@ const About = () => {
           <Image
             className="rounded-xl"
             src={AboutImg}
-            alt=""
-            // width="100%"
-            // height="100vh"
+            alt="about-image"
+            width={500}
+            height={500}
           />
         </div>
       </div>
