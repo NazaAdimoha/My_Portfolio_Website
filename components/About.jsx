@@ -22,7 +22,7 @@ const About = () => {
           </p>
           <p className="text-gray-500 py-2 ">
             In my current role, I developed a financial payment system that
-            allows a program owner to fund users' wallets and or virtual cards.
+            allows a program owner to fund users wallets and or virtual cards.
             This solution was fully localized by integrating the reactI18
             library, to accommodate multiple languages for various types of
             users and equally give respective users, full control over using the
