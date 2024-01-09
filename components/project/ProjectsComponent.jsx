@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import ScoreCard from '../../public/assets/projects/scorecardImgs.jpg';
 import BuyConnect from '../../public/assets/projects/buyconnect.jpg';
 import TraderaXpress from '../../public/assets/projects/tradexpress.jpg';
+import BykeCave from '../../public/assets/projects/Byke_Cave.png';
+import UBURU from '../../public/assets/projects/UBURU.png';
+import MSIA from '../../public/assets/projects/MSIA.png';
 import ProjectItem from './ProjectItem';
 
 const ProjectsComponent = () => {
@@ -39,9 +42,9 @@ const ProjectsComponent = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } }}
         >
-          <ProjectItem title="ScoreCard" backgroundImg={ScoreCard} projectUrl="/scoreCard" />
-          <ProjectItem title="BuyConnect" backgroundImg={BuyConnect} projectUrl="/buyConnect" />
-          <ProjectItem title="TraderaXpress" backgroundImg={TraderaXpress} projectUrl="/traderaxpress" />
+          <ProjectItem title="Byke_Cave" backgroundImg={BykeCave} projectUrl="/scoreCard" />
+          <ProjectItem title="Uburu.ai" backgroundImg={UBURU} projectUrl="/buyConnect" />
+          <ProjectItem title="MSIA" backgroundImg={MSIA} projectUrl="/traderaxpress" />
         </motion.div>
       </div>
     </motion.div>
