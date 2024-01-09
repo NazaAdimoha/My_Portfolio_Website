@@ -8,6 +8,7 @@ import useDownloader from "react-use-downloader";
 import { motion, useAnimation } from "framer-motion"; // Import motion and useAnimation
 import Image from "next/image";
 import Profile from "../public/assets/brand/naza.jpg";
+import HeroIcon from "../public/assets/heroicon.jpg";
 
 const Main = () => {
   const { download } = useDownloader();
@@ -152,9 +153,9 @@ const Main = () => {
         >
           <Image
             className="w-full h-full lg:max-w-3xl"
-            src="https://merakiui.com/images/components/Catalogue-pana.svg"
-            width={600}
-            height={600}
+            src={HeroIcon}
+            width={550}
+            height={550}
             alt="Catalogue-pana.svg"
           />
         </motion.div>
