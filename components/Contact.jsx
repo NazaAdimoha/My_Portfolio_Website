@@ -10,6 +10,7 @@ import Link from "next/link";
 import { send } from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Confetti from "react-dom-confetti";
 
 const Contact = () => {
   const showToastMessage = () => {
@@ -25,11 +26,13 @@ const Contact = () => {
   };
 
   const [sender_name, set_sender_name] = React.useState("");
-  console.log("---", sender_name )
   const [sender_email, set_sender_email] = React.useState("");
   const [sender_message, set_sender_message] = React.useState("");
   const [sender_subject, set_sender_subject] = React.useState("");
   const [sender_phone, set_sender_phone] = React.useState("");
+
+  //adding state to track confetti
+  const [confetti, setConfetti] = React.useState(false);
 
   const sendMail = (e) => {
     e.preventDefault();
@@ -56,7 +59,13 @@ const Contact = () => {
     set_sender_message("");
     set_sender_subject("");
     set_sender_phone("");
+    setConfetti(true);
     showToastMessage();
+
+    //reset confetti after 5 seconds
+    setTimeout(() => {
+      setConfetti(false);
+    }, 5000);
   };
 
   const handleChange = (e) => {
@@ -90,6 +99,21 @@ const Contact = () => {
 
   const buttonVariants = {
     hover: { scale: 1.1 },
+  };
+
+  //confetti config
+  const confettiConfig = {
+    angle: 360,
+    spread: 360,
+    startVelocity: 40,
+    elementCount: 100,
+    dragFriction: 0.19,
+    duration: 5000,
+    stagger: 5,
+    width: "10px",
+    height: "10px",
+    perspective: "300px",
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
   };
 
   return (
@@ -159,6 +183,12 @@ const Contact = () => {
             >
               Buzz Me!
             </motion.button>
+            {/* Add Confetti Component */}
+              <Confetti
+                active={confetti}
+                config={confettiConfig}
+
+              />
           </form>
           <ToastContainer />
         </motion.div>
