@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import BykeCave from ".././public/assets/projects/bykecave.png";
+import DropBox from ".././public/assets/projects/dropboxlight.png";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
 import Link from "next/link";
 
-const ScoreCard = () => {
+const DropboxCloned = () => {
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] lg:h-[60vh] relative">
@@ -13,12 +13,12 @@ const ScoreCard = () => {
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={BykeCave}
+          src={DropBox}
           alt="/"
         />
         <div className="absolute top-[80%] md:top-[30%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] -translate-y-[52%] text-white py-2 px-2 z-10">
-          <h2 className="py-2">BYKE_CAVE</h2>
-          <h3>Next Js | Javascript | Context API | Tailwind CSS | React Toastify | HOC | </h3>
+          <h2 className="py-2">Dropbox Cloned</h2>
+          <h3>Next JS 14 | TypeScript |Tailwind CSS | Firebase | Firestore | clerk</h3>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
@@ -26,14 +26,17 @@ const ScoreCard = () => {
           <p className="mb-3">Project</p>
           <h2>Overview</h2>
           <p className="mt-3">
-            Your one-stop store for bicycles and their accessories ranging from electric bikes to classic bikes
+            Dropbox clone is a web application that allows users to create, edit, delete and share files and folders.
+            This web app allows you to bascially upload and store almost any file type utilizing firebase storage.
+            Zustand was used to manage the state of the application. Clerk was used for authentication and authorization.
+            And of course Next Js 14 with the lovely App Router feature was used to handle the routing of the application.
           </p>
-          <a href="https://github.com/NazaAdimoha/bykecave" target="_blank" rel="noreferrer">
-            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
+          <a href="https://github.com/NazaAdimoha/Dropbox-cloned" target="_blank" rel="noreferrer">
+            <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
           
-          <a href="https://bykecave.vercel.app/">
-            <button className="px-8 py-2 mt-4 mr-8">Code</button>
+          <a href="https://dropbox-cloned.vercel.app/">
+            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
           
         </div>
@@ -43,11 +46,11 @@ const ScoreCard = () => {
                 <div className="grid grid-cols-3 md:grid-cols-1">
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                        Next Js
+                        Next Js 14 App Router
                     </p>
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                        Javascript
+                        Typescript
                     </p>
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
@@ -55,19 +58,19 @@ const ScoreCard = () => {
                     </p>
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                        Context API
+                        clerk
                     </p>
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                        Higher Order Components
+                        ShadCn
                     </p>
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                        React Toastify
+                        Zustand
                     </p>
                     <p className="text-gray-600 flex items-center py-2">
                         <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                        Composition
+                        React-Hook-Form
                     </p>
                 </div>
             </div>
@@ -82,4 +85,4 @@ const ScoreCard = () => {
   );
 };
 
-export default ScoreCard;
+export default DropboxCloned;

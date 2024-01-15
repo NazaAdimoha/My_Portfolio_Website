@@ -6,6 +6,7 @@ import TraderaXpress from '../../public/assets/projects/tradexpress.jpg';
 import BykeCave from '../../public/assets/projects/Byke_Cave.png';
 import UBURU from '../../public/assets/projects/UBURU.png';
 import MSIA from '../../public/assets/projects/MSIA.png';
+import DropBoxDark from '../../public/assets/projects/dropboxdark.png';
 import ProjectItem from './ProjectItem';
 
 const ProjectsComponent = () => {
@@ -42,9 +43,10 @@ const ProjectsComponent = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } }}
         >
-          <ProjectItem title="Byke_Cave" backgroundImg={BykeCave} projectUrl="/scoreCard" />
-          <ProjectItem title="Uburu.ai" backgroundImg={UBURU} projectUrl="/buyConnect" />
-          <ProjectItem title="MSIA" backgroundImg={MSIA} projectUrl="/traderaxpress" />
+          <ProjectItem title="Byke_Cave" backgroundImg={BykeCave} projectUrl="/scoreCard" stack="Next JS | Context API | Tailwind | Custom Hooks" />
+          <ProjectItem title="Uburu.ai" backgroundImg={UBURU} projectUrl="/buyConnect" stack="React | Redux-Thunk | Styled-Components | StoryBook | Unit Testing | Typescript" />
+          <ProjectItem title="MSIA OCCULUS" backgroundImg={MSIA} projectUrl="/traderaxpress" stack="React | Typescript | Tanstack Query | Redux | Context API | Styled Components | Custom Hooks" />
+          <ProjectItem title="Dropbox_Cloned" backgroundImg={DropBoxDark} projectUrl="/dropbox" stack="Next Js-14 | Typescript | Clerk | Tailwind CSS | Custom Hooks" />
         </motion.div>
       </div>
     </motion.div>

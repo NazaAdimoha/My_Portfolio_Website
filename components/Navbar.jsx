@@ -16,7 +16,7 @@ const Navbar = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/scoreCard' || router.asPath === '/buyConnect' || router.asPath === '/traderaxpress') {
+    if (router.asPath === '/scoreCard' || router.asPath === '/buyConnect' || router.asPath === '/traderaxpress' || router.asPath === '/dropbox') {
       setNavBg('transparent');
       setLinksColor('#ecf0f3');
     } else {

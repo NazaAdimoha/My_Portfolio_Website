@@ -16,7 +16,7 @@ const traderaxpress = () => {
           src={Tradera}
           alt="/"
         />
-        <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] -translate-y-[52%] text-white py-2 px-2 z-10">
+        <div className="absolute top-[80%] md:top-[30%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] -translate-y-[52%] text-white py-2 px-2 z-10">
           <h2 className="py-2">TraderaXpress</h2>
           <h3>React Js | Tailwind CSS</h3>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BuyConnect from ".././public/assets/projects/buyconnectbanner.png";
+import Uburu from ".././public/assets/projects/uburuai.png";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
 import Link from "next/link";
 
@@ -13,26 +13,38 @@ const buyConnect = () => {
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={BuyConnect}
+          src={Uburu}
           alt="/"
         />
-        <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] -translate-y-[52%] text-white py-2 px-2 z-10">
-          <h2 className="py-2">BuyConnect</h2>
-          <h3>React Js | Styled Components | Redux-toolkit |</h3>
+        <div className="absolute top-[80%] md:top-[30%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] -translate-y-[52%] text-white py-2 px-2 z-10">
+          <h2 className="py-2">Uburu.ai</h2>
+          <h3>
+            React Js | Typescript | Styled Components | StoryBook | Jest |
+            Formik | Role-Based-Auth | Redux-thunk | Middleware
+          </h3>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         <div className="col-span-4">
-          <p>Project</p>
+          <p className="mb-3">Project</p>
           <h2>Overview</h2>
-          <p className="">
-          BuyConnect.. is a marketplace app that facilitates purchasing of products online, with seamless payment methods. <br/>
-          The Payment gateway integratated was the Paystack payment Api
+          <p className="mt-3">
+            Uburu Health is built to support all your research needs. <br/> Seamless
+            Connections To EMRs Get access to electronic patient data without
+            hassle
           </p>
-          <a href="https://buyconnect.netlify.app/" target="_blank" rel="noreferrer">
+          <a
+            href="https://uburu.ai"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/NazaAdimoha/Market_Place_Client_Side" target="_blank" rel="noreferrer">
+          <a
+            href="/buyConnect"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
         </div>
@@ -50,19 +62,31 @@ const buyConnect = () => {
               </p>
               <p className="text-gray-600 flex items-center py-2">
                 <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                Redux
+                Redux-thunk
               </p>
               <p className="text-gray-600 flex items-center py-2">
                 <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                Node
+                Javascript
               </p>
               <p className="text-gray-600 flex items-center py-2">
                 <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                Express
+                Typescript
               </p>
               <p className="text-gray-600 flex items-center py-2">
                 <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
-                MongoDB
+                Typescript
+              </p>
+              <p className="text-gray-600 flex items-center py-2">
+                <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
+                Story Book
+              </p>
+              <p className="text-gray-600 flex items-center py-2">
+                <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
+                Formik
+              </p>
+              <p className="text-gray-600 flex items-center py-2">
+                <MdOutlineRadioButtonChecked className="inline-block text-[#5651e5] mr-2" />
+                Role Based Authentication
               </p>
             </div>
           </div>
